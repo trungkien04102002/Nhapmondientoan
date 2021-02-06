@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  
+  .wrap {
+    width: 90%;
+    height: fit-content;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .wrap .item {
+      width: 90%;
+      margin: 10px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column; }
+      .wrap .item .title {
+        width: 100%;
+        padding: 5px;
+        color: rgb(255, 90, 24);
+        font-size: 32px;
+        text-align: left; }
+      .wrap .item .content {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start; }
+        .wrap .item .content .image {
+          width: fit-content;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-end; }
+          .wrap .item .content .image img {
+            width: 200px;
+            margin: 5px 5px; }
+        .wrap .item .content .text {
+          width: fit-content;
+          display: flex;
+          align-items: center; }
+          .wrap .item .content .text p {
+            width: 400px;
+            padding: 0px 10px; }
+      .wrap .item:nth-child(2) .title {
+        text-align: right; }
+      .wrap .item:nth-child(2) .content {
+        flex-direction: row-reverse; }
+      .wrap .item:nth-child(3) .content .image img:nth-child(2){
+        width: 130px;
+      }
+      .wrap .item:nth-child(4) .title {
+        text-align: right; }
+      .wrap .item:nth-child(4) .content {
+        flex-direction: row-reverse; }
+      .wrap .item:nth-child(4) .content .image img{
+        width: 270px;
+      }
+  
+  @media (max-width: 500px) {
+    .wrap .item .title{
+      text-align: center;
+    }
+    .wrap .item:nth-child(2) .title{
+      text-align: center;
+    }
+    .wrap .item:nth-child(4) .title{
+      text-align: center;
+    }
+    .wrap .item .content{
+      justify-content: center;
+    }
+    .wrap .item:nth-child(3) .content{
+      justify-content: center;
+    }
+    .wrap .item:nth-child(3) .content .image{
+      justify-content: center;
+    }
+    .wrap .item:nth-child(4) .content .image img{
+      width: 200px;
+    }
+    .wrap .item .content .text p {
+      width: 200px; } }
+  
